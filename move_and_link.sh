@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Take source file name from $1 and moves it to $2, leaving soft-link behind
+# Take source file from $1 and moves it to folder $2, leaving soft-link behind
 # 
 # NOTE: mv is forcing overwright of file. File checked to be not link or directory or device file
 # NOTE: Since it is mainly for moving system files, run as ROOT requirement is mandatory
