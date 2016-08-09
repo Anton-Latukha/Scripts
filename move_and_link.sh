@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Take source file name from $1 and moves it TOFILE, leaving soft-link behind
+# Take source file name from $1 and moves it to $2, leaving soft-link behind
 # 
-# NOTE: mv is forcing overwright
-# NOTE: Since it is mainly for moving system files, I made run as ROOT requirement mandatory
+# NOTE: mv is forcing overwright of file. File checked to be not link or directory or device file
+# NOTE: Since it is mainly for moving system files, run as ROOT requirement is mandatory
 
 # Script name
 readonly SCRIPT_NAME="$(basename "$0")"
@@ -21,7 +21,7 @@ readonly FILEPATH="$(realpath "$1")"
 
 readonly FILENAME="$(basename "$FILEPATH")"
 
-readonly TOPATH='/mnt/vault/storage/important/Personal/Technical/Configs/System/'
+readonly TOPATH="$2"
 
 readonly TOFILE="$TOPATH""$FILENAME"
 
