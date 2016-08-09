@@ -23,6 +23,7 @@ readonly FILENAME="$(basename "$FILEPATH")"
 
 readonly TOPATH="$2"
 
+# TODO Create a key '-a, --absolute' that going to preserve folder structure and rebase / to $TOPATH, so TOFILE going to create directory branch 
 readonly TOFILE="$TOPATH""$FILENAME"
 
 
