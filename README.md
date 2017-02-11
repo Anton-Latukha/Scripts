@@ -1,2 +1,2 @@
-# Scripts
-Stash of scripts
+# scripts
+Stash of scripts for day-to-day use

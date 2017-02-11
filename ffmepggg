@@ -1,0 +1,1 @@
+ffmpeg -video_size x800 -framerate 15 -f x11grab -i :0.0+0,30 -c:v libx264 -qp 0 -preset ultrafast capture.mkv 
