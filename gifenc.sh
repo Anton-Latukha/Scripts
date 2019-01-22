@@ -10,3 +10,5 @@ filters='fps=15'
 
 ffmpeg -v warning -i "$input_file" -vf "$filters,palettegen" -y "$tmp_palette_file"
 ffmpeg -v warning -i "$input_file" -i "$tmp_palette_file" -lavfi "$filters [x]; [x][1:v] paletteuse" -y "$output_file"
+
+rm "tmp_palette_file"
